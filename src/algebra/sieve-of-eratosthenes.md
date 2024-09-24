@@ -208,7 +208,7 @@ We pre-generate all prime numbers up to $\sqrt R$, and use those primes to mark 
 vector<char> segmentedSieve(long long L, long long R) {
     // generate all primes up to sqrt(R)
     long long lim = sqrt(R);
-    vector<char> mark(lim + 1, false);
+    vector<bool> mark(lim + 1, false);// better use bool
     vector<long long> primes;
     for (long long i = 2; i <= lim; ++i) {
         if (!mark[i]) {
